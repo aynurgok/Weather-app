@@ -1,19 +1,28 @@
-import React from 'react'
+import React,{ useContext } from 'react'
+import { GlobalContext } from '../context/GlobalContext';
 
 function Info() {
+  
+  const {result} = useContext(GlobalContext)
+  const {main} = result
   return (
     <div>
-      <div className='temp'>
-        <p>sicaklık derecesi</p>
-        <p>Hissedilem</p>
-      </div>
-      <div className='sehir'>
-        <p>San francisko</p>
-        <p>Tarih</p>
-        <p>hava durumu</p>
-      </div>
+      {
+        result ? <div>
+          <div>
+          <div className='temp'>
+            <p>{main.temp}</p>
+            <p>{result.feels_like}</p>
+          </div>
+          <div className='sehir'>
+            <p>{result.name} {result.sys.country}</p>
+            <p>Tarih</p>
+          </div>
+        </div> 
+      </div> : null
+      }
     </div>
-  )
+  );
 }
 
 export default Info
