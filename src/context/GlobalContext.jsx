@@ -6,6 +6,7 @@ export const GlobalContext = createContext();
 const GlobalProvider = ({children}) => {
     const [search, setSearch] = useState("")
     const [result, setResult] = useState([])
+    const [load, setLoad] = useState(false)
 
     const api = import.meta.env.VITE_REACT_APP_API;
     const onSubmit = async (e) => {
@@ -17,10 +18,8 @@ const GlobalProvider = ({children}) => {
         .then(response => {
           setResult(response.data)
         })
-        
-        .catch((error) => {
-          console.log(error);
-        });
+        setLoad(true)
+       
     };
     
     const data = {
@@ -28,7 +27,9 @@ const GlobalProvider = ({children}) => {
       setSearch,
       result,
       setResult,
-      onSubmit
+      onSubmit,
+      load,
+      setLoad
     }
     return(
         <GlobalContext.Provider value = {data}>

@@ -3,22 +3,23 @@ import { GlobalContext } from '../context/GlobalContext';
 
 function Info() {
   
-  const {result} = useContext(GlobalContext)
-  const {main} = result
+  const {result, load} = useContext(GlobalContext)
+  const {main,sys} = result
+ 
   return (
     <div>
       {
-        result ? <div>
-          <div>
+        load ? <div>
+           <div>
           <div className='temp'>
             <p>{main.temp}</p>
             <p>{result.feels_like}</p>
           </div>
           <div className='sehir'>
-            <p>{result.name} {result.sys.country}</p>
+            <p>{name} {sys.country}</p>
             <p>Tarih</p>
           </div>
-        </div> 
+        </div>
       </div> : null
       }
     </div>
