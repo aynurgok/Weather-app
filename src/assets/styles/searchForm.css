@@ -1,8 +1,89 @@
 .searchForm-container {
   display: flex;
-  border: 1px solid rgb(78, 226, 19);
   flex-direction: column;
   padding: 20px;
   gap: 10px;
   align-items: center;
+}
+.searchForm-container .search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.searchForm-container .search-box input[type=text] {
+  width: 250px;
+  height: 30px;
+  border-radius: 50px;
+  border: 1px solid #0C5576;
+  position: relative;
+  transition: width 0.35s ease-in-out;
+  color: #0C5576;
+  font-size: 17px;
+  text-indent: 22px;
+}
+.searchForm-container .search-box:focus {
+  outline: 0;
+  -webkit-animation: borderColors 0.3s both ease-in-out;
+          animation: borderColors 0.3s both ease-in-out;
+  width: 340px;
+}
+.searchForm-container .search-box .search-btn {
+  background-color: #aeced8;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+@-webkit-keyframes borderColors {
+  0% {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  33% {
+    border-top: 5px solid #0692BC;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  66% {
+    border-top: 5px solid #0692BC;
+    border-right: 5px solid #0692BC;
+    border-bottom-color: transparent;
+    border-left: 5px solid #0692BC;
+  }
+  100% {
+    border-top: 5px solid #0692BC;
+    border-right: 5px solid #0692BC;
+    border-bottom: 5px solid #0692BC;
+    border-left: 5px solid #0692BC;
+  }
+}
+
+@keyframes borderColors {
+  0% {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  33% {
+    border-top: 5px solid #0692BC;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  66% {
+    border-top: 5px solid #0692BC;
+    border-right: 5px solid #0692BC;
+    border-bottom-color: transparent;
+    border-left: 5px solid #0692BC;
+  }
+  100% {
+    border-top: 5px solid #0692BC;
+    border-right: 5px solid #0692BC;
+    border-bottom: 5px solid #0692BC;
+    border-left: 5px solid #0692BC;
+  }
 }/*# sourceMappingURL=searchForm.css.map */

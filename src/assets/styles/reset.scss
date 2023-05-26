@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #7c85e6;
+  
+    &:focus {
+      outline: 0;
+    }
+
+    &:after, 
+    &:before {
+        box-sizing: border-box;
+    }
+  }
+
+  body {
+    background-color: #fdffff;
+    font-size: 16px;
+    font-style: normal;
+  }
+
+  button {
+    cursor: pointer;
+  }
