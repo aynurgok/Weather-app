@@ -25,6 +25,7 @@ const GlobalProvider = ({children}) => {
           setResult(response.data)
         })
         setLoad(true)
+        setSearch("")
        
     };
     

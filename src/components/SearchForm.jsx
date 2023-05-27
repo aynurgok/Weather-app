@@ -8,6 +8,7 @@ function SearchForm() {
   const onChange = (e) => {
     setSearch(e.target.value);
     e.preventDefault();
+    
   };
   
   return (

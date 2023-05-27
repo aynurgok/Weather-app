@@ -1,13 +1,13 @@
 .info-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: 600px;
     padding:40px;
     justify-content: space-between;
     gap:20px;
     .left-box {
-        border-right:1px solid black;
-        padding-right:20px;
+        border-right:1px solid rgb(255, 255, 255);
+        padding-right:50px;
         .country-name {
             font-size:30px;
             color:#ffff;
@@ -41,13 +41,24 @@
         }
     }
     .right-box {
-        border:1px solid red;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); 
-        grid-template-rows: repeat(2, 20px); 
+        display: flex;
         gap: 30px; 
+        justify-content: start;
         .box {
-            border:1px solid red;
+            display: flex;
+            gap:5px;
+            text-align: center;
+            flex-direction: column;
+            .feels, .speed {
+                font-size:20px;
+                color:#ffff;
+                font-weight: 600;
+            }
+            .high, .wind {
+                font-size:13px;
+                color:#ffff;
+            }
+           
         }
     }
 }
